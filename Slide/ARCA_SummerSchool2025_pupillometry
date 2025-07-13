@@ -1,0 +1,339 @@
+---
+title: "Pupillometry"
+subtitle: "The ARCA initiative Summer School: Unlocking psychological expertise for academic and business success"
+author:
+  - name: "Giulia Calignano"
+    url:  "https://www.researchgate.net/profile/Giulia-Calignano"
+date: "14 July 2025"
+
+format:
+  revealjs:
+    theme: simple
+    toc: false
+    slide-number: true
+    progress: true
+    center: false
+    transition: fade
+    incremental: true
+    title-slide-attributes:
+      data-background-image: "sfondo.png"   # immagine di sfondo
+      data-background-size: 100%           # riempi tutta la slide
+      data-background-position: center      # centra l’immagine
+      data-background-opacity: "0.25"     # (opz.) velatura se serve
+      data-background-repeat: repeat 
+css: |
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }    # 
+   :root {
+    --r-main-color: #003A8C;          /* testo normale e titoli     */
+    --r-link-color: #003A8C;          /* link non visitati          */
+    --r-link-color-dark: #002463;     /* link al passaggio hover    */
+  }
+    .reveal .fragment {
+      color: var(--r-main-color);
+  }
+fig-align: center
+
+---
+
+#  Outline
+
+- Pupil physiology and th main sources of noise in measurement and interpretation of the pupil signal.
+
+
+- Recommendations on experimental design and setting characteristics in cognitive pupillometry.
+
+
+- Degrees of freedom encountered in the data processing and visualization pipeline and the multiverse approach to pupillometry  pre-processing.
+
+
+- The functional and cognitive interpretation of pupillometric measures in light of foundational studies in the field.
+
+---
+
+> [**Hands-on Materials** ↗](https://osf.io/sjq62/)
+
+![](osf.png){width=100%}
+
+---
+
+My Academic Journey 
+
+![](journey.png){width=100% fig-align="center"}
+
+---
+
+Increasing interest in pupillometry
+
+![](pupil_distribution.png){width=100%}
+
+# Epistemological fundations: physiology of pupil changes in cognitive sciences
+
+
+---
+
+![](figuno.png){width=60% fig-align="center"}
+
+---
+
+![](figudue.png){width=70%}
+
+---
+
+![](figot.png){width=100%}
+---
+
+![](int2.png){width=60% fig-align="center"}
+
+*Grujic, N., Polania, R., & Burdakov, D. (2024). Neurobehavioral meaning of pupil size. Neuron*
+
+
+---
+
+![](int1.png){width=100%}
+*Grujic, N., Polania, R., & Burdakov, D. (2024). Neurobehavioral meaning of pupil size. Neuron*
+
+# The main sources of noise in measurement and interpretation of the pupil signal
+
+---
+
+Eye Calibration and Eye movements
+
+![](figuset.png){width=100%}
+
+---
+
+Pupil light response
+
+![](figutre.png){width=70%}
+
+---
+
+Eye movement and pupil measurement errors and artifacts
+
+![](figuquat.png){width=70%}
+
+---
+
+Psychosensory response
+
+![](figucinq.png){width=70%}
+
+---
+
+Working Memory Maintenance
+
+![](figusei.png){width=70%}
+
+---
+
+![](fig10.png){width=100%}
+
+---
+
+![](fig11.png){width=100%}
+
+
+# Pupil Phasic State investigation
+
+## A Solid Replication: Pupil dilation, Working memory and Cognitive effort
+
+[**Sirois and Brisson, 2014 materials** ↗](https://oraprdnt.uqtr.uquebec.ca/portail/gscw031?owa_no_site=314&owa_no_fiche=3)
+
+---
+
+![](fig13.png){width=75%}
+
+---
+
+![](fig14.png){width=75%}
+
+---
+
+![](fig15.png){width=75%}
+
+
+# From Design to Data Analysis
+
+---
+
+![](fig16.png){width=75%}
+
+
+## Setting characteristics 
+
+- **Light Control**: Pupil size is primarily influenced by light. Therefore, maintaining a constant and controlled light level is essential, especially when using visual stimuli. Researchers often use standard luminance images or control the brightness of stimuli to avoid confounding effects of light changes on pupil size. 
+
+
+
+- **Minimizing External Stimuli**: Background noise, visual distractions, and other external stimuli can influence pupil responses. Conducting experiments in a quiet, dimly lit room with minimal distractions helps to isolate the specific effects of the stimuli being investigated. 
+
+---
+
+- **Participant Comfort and Positioning**: Participants should be seated comfortably, often with a chin or headrest, to maintain a consistent distance between their eyes and the recording device. This helps ensure that changes in pupil size are not due to changes in head position or distance from the stimulus. 
+
+- **Head and Eye Tracking**: Modern pupillometry often utilizes head-mounted eye trackers or head-tracking devices to allow for more natural head movements while still maintaining accurate tracking of eye position. However, even with these devices, chin rests can be useful to minimize local luminance and distance effects. 
+
+
+## Classical paradigms in cognitive sciences
+
+Open tools: [OpenSesame](https://osdoc.cogsci.nl/) [R studio](https://posit.co/download/rstudio-desktop/)
+
+![](ospr.png){width=20%}
+
+---
+
+![](attentional blink.png){width=75% fig-align="center"}
+
+---
+
+![](capture.png){width=75% fig-align="center"}
+
+---
+
+![](gaze.png){width=75%}
+---
+
+![](IAT.png){width=75%}
+
+# Degrees of freedom in data processing and data visualization
+
+--- 
+
+- **data parsing**  
+- sanity check to “weight” noise sources  
+  *e.g.* extreme values, AOI  
+- missing data — *interpolation ?*  
+- baseline correction  
+- model selection  
+
+::: aside
+How many degrees of freedom in data management?  
+See **[Psicostat Pupillometry Multiverse ↗](https://link.springer.com/article/10.3758/s13428-023-02172-8)**.
+See **[The Pupil Collaboration ↗](https://www.sciencedirect.com/science/article/pii/S0163638323000826)**.
+
+:::
+
+
+## Hands-on
+
+[Excercise 1](https://osf.io/sjq62/files/osfstorage#)  
+
+1. create data dictionary  
+
+2. explore a portion of the multiversewith `R`
+
+design: familiarisation, visual vs audiovisual  
+![](kak.png){width=35%}
+
+
+## Hands-on
+
+[Excercise 2](https://osf.io/sjq62/files/osfstorage#)  
+
+1. modify the `OpenSesame` Digit Span task
+
+2. explore a portion of the multiverse with `R`
+
+
+## Hands-on
+
+[Excercise 3](https://osf.io/sjq62/files/osfstorage#)  
+
+1. Explore the whole multiverse with `R`
+
+## Hands-on
+
+[Multilab Multiverse](https://osf.io/sjq62/files/osfstorage#)  
+
+**Interested in learning more?**
+
+Access the full ManyBabies Workshop:
+
+- [SLIDES](https://caligiu.github.io/MultiverseWorkshopMB/Wslide/Index.html#/title-slide)
+
+- [FULL VIDEO](https://www.youtube.com/watch?v=9iuddKmssaU&ab_channel=ManyBabies)
+
+---
+
+# Pupillometry functional and cognitive interpretation in light of the studies across fields {#functional}
+
+
+---
+
+![](int2.png){width=60% fig-align="center"}
+
+*Grujic, N., Polania, R., & Burdakov, D. (2024). Neurobehavioral meaning of pupil size. Neuron*
+
+
+---
+
+![](int1.png){width=100%}
+*Grujic, N., Polania, R., & Burdakov, D. (2024). Neurobehavioral meaning of pupil size. Neuron*
+
+---
+
+- <span style="color:pink">[Word Recognition and Race ↗](10.13140/RG.2.2.21252.74887)</span>  
+
+- <span style="color:blue">[Rhytm and Language Development ↗](https://www.sciencedirect.com/science/article/pii/S0010027723003220?via%3Dihub)</span>  
+- <span style="color:red">[Language and Attention ↗](https://journals.sagepub.com/doi/full/10.1177/2331216518800869)</span>  
+- <span style="color:orange">[Review on cognitive effort ↗](https://link.springer.com/article/10.3758/s13423-018-1432-y)</span>  
+- <span style="color:gold">[Psychopathology ↗](https://www.sciencedirect.com/science/article/pii/S030105112030082X)</span> 
+
+- <span style="color:gold">[Attachment and Emotion ↗](https://www.nature.com/articles/s41598-025-92347-4)</span>
+  
+- <span style="color:gold">[Memory ↗](https://wires.onlinelibrary.wiley.com/doi/full/10.1002/wcs.1668)</span> 
+
+- <span style="color:gold">[Mindfulness ↗](https://www.cell.com/current-biology/fulltext/S0960-9822(20)31089-7)</span>
+
+- <span style="color:gold">[Working Memory Operations ↗](https://wires.onlinelibrary.wiley.com/doi/full/10.1002/wcs.1668)</span>
+
+
+## Hands-on
+
+[Excercise 4](https://www.pupillometry.it/)  
+[documentation](https://github.com/fabiocarrara/meye/wiki/)
+
+1. Develop a research question and hypothesis
+
+2. Develop the design and implement it e.g. OpenSesame, PsychoPy etc.
+
+3. Develop your pre-processing multiverse path
+
+4. Develop the pipeline to visualize and test the hypothesis
+
+## Tips for a safe trip in cognitive pupillometry
+
+1. **<span style="color:blue">Define the research question</span>**  
+2. Choose a solid **<span style="color:blue">design</span>** (complementary measures)  
+3. **<span style="color:blue">Adapt</span>** the design for pupil recording  
+4. Pre-select degrees of freedom in **<span style="color:blue">pre-processing</span>** and **<span style="color:blue">analysis</span>**  
+
+--- 
+
+5. When interpreting, ask:  
+   - physiological **<span style="color:blue">artifacts?</span>**  
+   - **<span style="color:blue">latency</span>** from stimulus to peak?  
+   - **<span style="color:blue">when</span>** does the effect emerge?  
+   - extra **<span style="color:blue">cognitive</span>** processes being tapped?  
+
+
+Across all the steps always look for **<span style="color:blue">epistemology soundness</span>**
+
+
+---
+<div class="thank-you-container">
+  <h1>Thank you</h1>
+
+  <p>
+    <a href="mailto:giulia.calignano@unipd.it">📧 Email</a> |
+    <a href="https://www.researchgate.net/profile/Giulia-Calignano">🔬 ResearchGate</a> |
+    <a href="https://x.com/CalignanoGiulia">🐦 Twitter</a> |
+    <a href="https://bsky.app/profile/giuliacalignano.bsky.social">🌐 Bluesky</a>
+  </p>
+</div>
+
+![](sfondo.png){width=35%}
